@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: #f9fafb;
+  color: #222;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+h1, h2, h3 {
+  color: #1e3a8a;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.trip-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+
+.trip-card {
+  background-color: #eff6ff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.btn {
+  display: inline-block;
+  background-color: #2563eb;
   color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  background-color: #1e40af;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background: #f3f4f6;
+  margin-bottom: 0.4rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
 }
